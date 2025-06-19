@@ -1,0 +1,158 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/login"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login_bg">
+
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="200dp"
+        android:background="@drawable/rounded_corners"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="168dp"
+        android:layout_height="193dp"
+        android:layout_marginStart="128dp"
+        android:layout_marginTop="108dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/icon" />
+
+    <LinearLayout
+        android:layout_width="350dp"
+        android:layout_height="match_parent"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="280dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <EditText
+            android:id="@+id/edt_register_fullname"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/rounded_edt"
+            android:drawableLeft="@drawable/baseline_person_24"
+            android:drawablePadding="8dp"
+            android:hint="Fullname"
+            android:textColor="@color/textColorHint"
+            android:padding="15dp"
+            android:textColorHint="@color/textColorHint" />
+
+        <EditText
+            android:id="@+id/edt_register_email"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/rounded_edt"
+            android:drawableLeft="@drawable/baseline_email_24"
+            android:drawablePadding="8dp"
+            android:hint="Email"
+            android:padding="15dp"
+            android:textColor="@color/textColorHint"
+            android:textColorHint="@color/textColorHint" />
+
+        <EditText
+            android:id="@+id/edt_register_dob"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/rounded_edt"
+            android:drawableLeft="@drawable/baseline_date_range_24"
+            android:drawablePadding="8dp"
+            android:hint="Date of birth"
+            android:focusable="false"
+            android:inputType="none"
+            android:padding="15dp"
+            android:textColor="@color/textColorHint"
+            android:textColorHint="@color/textColorHint" />
+
+
+        <EditText
+            android:id="@+id/edt_register_phone"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/rounded_edt"
+            android:drawableLeft="@drawable/baseline_phone_24"
+            android:drawablePadding="8dp"
+            android:hint="Phone Number"
+            android:padding="15dp"
+            android:textColor="@color/textColorHint"
+            android:textColorHint="@color/textColorHint" />
+
+        <EditText
+            android:id="@+id/edt_register_password"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/rounded_edt"
+            android:drawableLeft="@drawable/baseline_lock_24"
+            android:drawablePadding="8dp"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:padding="15dp"
+            android:textColor="@color/textColorHint"
+            android:textColorHint="@color/textColorHint" />
+
+        <EditText
+            android:id="@+id/edt_register_re_password"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/rounded_edt"
+            android:drawableLeft="@drawable/baseline_lock_24"
+            android:drawablePadding="8dp"
+            android:hint="Re-enter password"
+            android:inputType="textPassword"
+            android:padding="15dp"
+            android:textColor="@color/textColorHint"
+            android:textColorHint="@color/textColorHint" />
+
+        <Button
+            android:id="@+id/btn_register"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/rounded_edt"
+            android:text="Register"
+            android:textSize="20sp"
+            app:backgroundTint="@color/button_background" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="end">
+            <TextView
+                android:id="@+id/linkText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:text="Already have an account? " />
+
+            <TextView
+                android:id="@+id/linkLogin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:text="Login Now " />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
