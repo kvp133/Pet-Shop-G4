@@ -4,153 +4,209 @@
     android:id="@+id/login"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/login_bg">
+    android:background="@drawable/glass_bg">
 
 
-    <View
-        android:id="@+id/view"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="200dp"
-        android:background="@drawable/rounded_corners"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="168dp"
-        android:layout_height="193dp"
-        android:layout_marginStart="128dp"
-        android:layout_marginTop="108dp"
-        app:layout_constraintStart_toStartOf="parent"
+    <FrameLayout
+        android:id="@+id/glass_card"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="32dp"
+        android:background="@drawable/glass_card"
+        android:elevation="8dp"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/icon" />
-
-    <LinearLayout
-        android:layout_width="350dp"
-        android:layout_height="match_parent"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="280dp"
-        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <EditText
-            android:id="@+id/edt_register_fullname"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:background="@drawable/rounded_edt"
-            android:drawableLeft="@drawable/baseline_person_24"
-            android:drawablePadding="8dp"
-            android:hint="Fullname"
-            android:textColor="@color/textColorHint"
-            android:padding="15dp"
-            android:textColorHint="@color/textColorHint" />
-
-        <EditText
-            android:id="@+id/edt_register_email"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/rounded_edt"
-            android:drawableLeft="@drawable/baseline_email_24"
-            android:drawablePadding="8dp"
-            android:hint="Email"
-            android:padding="15dp"
-            android:textColor="@color/textColorHint"
-            android:textColorHint="@color/textColorHint" />
-
-        <EditText
-            android:id="@+id/edt_register_dob"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/rounded_edt"
-            android:drawableLeft="@drawable/baseline_date_range_24"
-            android:drawablePadding="8dp"
-            android:hint="Date of birth"
-            android:focusable="false"
-            android:inputType="none"
-            android:padding="15dp"
-            android:textColor="@color/textColorHint"
-            android:textColorHint="@color/textColorHint" />
-
-
-        <EditText
-            android:id="@+id/edt_register_phone"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/rounded_edt"
-            android:drawableLeft="@drawable/baseline_phone_24"
-            android:drawablePadding="8dp"
-            android:hint="Phone Number"
-            android:padding="15dp"
-            android:textColor="@color/textColorHint"
-            android:textColorHint="@color/textColorHint" />
-
-        <EditText
-            android:id="@+id/edt_register_password"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/rounded_edt"
-            android:drawableLeft="@drawable/baseline_lock_24"
-            android:drawablePadding="8dp"
-            android:hint="Password"
-            android:inputType="textPassword"
-            android:padding="15dp"
-            android:textColor="@color/textColorHint"
-            android:textColorHint="@color/textColorHint" />
-
-        <EditText
-            android:id="@+id/edt_register_re_password"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/rounded_edt"
-            android:drawableLeft="@drawable/baseline_lock_24"
-            android:drawablePadding="8dp"
-            android:hint="Re-enter password"
-            android:inputType="textPassword"
-            android:padding="15dp"
-            android:textColor="@color/textColorHint"
-            android:textColorHint="@color/textColorHint" />
-
-        <Button
-            android:id="@+id/btn_register"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/rounded_edt"
-            android:text="Register"
-            android:textSize="20sp"
-            app:backgroundTint="@color/button_background" />
+        app:layout_constraintEnd_toEndOf="parent"
+        android:padding="32dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="end">
-            <TextView
-                android:id="@+id/linkText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="@color/white"
-                android:text="Already have an account? " />
+            android:orientation="vertical">
 
             <TextView
-                android:id="@+id/linkLogin"
-                android:layout_width="wrap_content"
+                android:id="@+id/tv_title"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="@color/white"
+                android:text="Chào mừng trở lại"
+                android:textColor="@android:color/white"
+                android:textSize="28sp"
                 android:textStyle="bold"
-                android:text="Login Now " />
+                android:gravity="center"
+                android:fontFamily="@font/poppins_semibold"
+                android:layout_marginBottom="4dp"/>
+
+            <TextView
+                android:id="@+id/tv_subtitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Đăng ký để tiếp tục"
+                android:textColor="@color/glass_white_80"
+                android:textSize="16sp"
+                android:gravity="center"
+                android:fontFamily="@font/poppins_light"
+                android:layout_marginBottom="24dp"/>
+
+            <EditText
+                android:id="@+id/edt_register_fullname"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/input_glass"
+                android:drawableLeft="@drawable/baseline_person_24"
+                android:drawablePadding="8dp"
+                android:hint="Họ và tên"
+                android:textColor="@android:color/white"
+                android:padding="15dp"
+                android:textColorHint="#B3FFFFFF"
+                android:fontFamily="@font/poppins_light"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:scrollHorizontally="true"
+                android:layout_marginBottom="10dp" />
+
+            <EditText
+                android:id="@+id/edt_register_email"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/input_glass"
+                android:drawableLeft="@drawable/baseline_email_24"
+                android:drawablePadding="8dp"
+                android:hint="Email"
+                android:padding="15dp"
+                android:textColor="@android:color/white"
+                android:textColorHint="#B3FFFFFF"
+                android:fontFamily="@font/poppins_light"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:scrollHorizontally="true"
+                android:layout_marginBottom="10dp" />
+
+            <EditText
+                android:id="@+id/edt_register_dob"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/input_glass"
+                android:drawableLeft="@drawable/baseline_date_range_24"
+                android:drawablePadding="8dp"
+                android:hint="Ngày sinh"
+                android:focusable="false"
+                android:inputType="none"
+                android:padding="15dp"
+                android:textColor="@android:color/white"
+                android:textColorHint="#B3FFFFFF"
+                android:fontFamily="@font/poppins_light"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:scrollHorizontally="true"
+                android:layout_marginBottom="10dp" />
+
+            <EditText
+                android:id="@+id/edt_register_phone"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/input_glass"
+                android:drawableLeft="@drawable/baseline_phone_24"
+                android:drawablePadding="8dp"
+                android:hint="Số điện thoại"
+                android:padding="15dp"
+                android:textColor="@android:color/white"
+                android:textColorHint="#B3FFFFFF"
+                android:fontFamily="@font/poppins_light"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:scrollHorizontally="true"
+                android:layout_marginBottom="10dp" />
+
+            <EditText
+                android:id="@+id/edt_register_password"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/input_glass"
+                android:drawableLeft="@drawable/baseline_lock_24"
+                android:drawablePadding="8dp"
+                android:hint="Mật khẩu"
+                android:inputType="textPassword"
+                android:padding="15dp"
+                android:textColor="@android:color/white"
+                android:textColorHint="#B3FFFFFF"
+                android:fontFamily="@font/poppins_light"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:scrollHorizontally="true"
+                android:layout_marginBottom="10dp" />
+
+            <EditText
+                android:id="@+id/edt_register_re_password"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/input_glass"
+                android:drawableLeft="@drawable/baseline_lock_24"
+                android:drawablePadding="8dp"
+                android:hint="Nhập lại mật khẩu"
+                android:inputType="textPassword"
+                android:padding="15dp"
+                android:textColor="@android:color/white"
+                android:textColorHint="#B3FFFFFF"
+                android:fontFamily="@font/poppins_light"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:scrollHorizontally="true"
+                android:layout_marginBottom="16dp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_register"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/button_glass_blue"
+                android:text="Đăng ký"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"
+                android:fontFamily="@font/poppins_semibold"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/linkText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/glass_white_80"
+                    android:text="Đã có tài khoản? " />
+                <TextView
+                    android:id="@+id/linkLogin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/glass_link_blue"
+                    android:textStyle="bold"
+                    android:text="Đăng nhập"
+                    android:fontFamily="@font/poppins_semibold" />
+            </LinearLayout>
         </LinearLayout>
-
-
-    </LinearLayout>
+    </FrameLayout>
 
 
 

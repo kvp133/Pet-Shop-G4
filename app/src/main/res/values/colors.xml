@@ -21,4 +21,14 @@
     <color name="teal_700">#FF018786</color>
     <color name="lavender">#8692f7</color>
 
+    <color name="glass_blue_1">#2193b0</color>
+    <color name="glass_blue_2">#6dd5ed</color>
+    <color name="glass_white_translucent">#80FFFFFF</color>
+    <color name="glass_border">#40FFFFFF</color>
+
+    <color name="glass_white_80">#CCFFFFFF</color>
+    <color name="glass_white_50">#80FFFFFF</color>
+    <color name="glass_border_white">#40FFFFFF</color>
+    <color name="glass_link_blue">#B3E5FC</color>
+
 </resources>
