@@ -1,16 +1,5 @@
 package com.example.petshopapplication.API;
 
-import com.example.petshopapplication.API_model.CityResponse;
-import com.example.petshopapplication.API_model.CreateOrderRequest;
-import com.example.petshopapplication.API_model.CreateOrderResponse;
-import com.example.petshopapplication.API_model.DistrictResponse;
-import com.example.petshopapplication.API_model.RateRequest;
-import com.example.petshopapplication.API_model.RateResponse;
-import com.example.petshopapplication.API_model.ShipmentSearchResponse;
-import com.example.petshopapplication.API_model.WardResponse;
-
-import java.util.List;
-
 import retrofit2.Call;
 import retrofit2.http.Body;
 import retrofit2.http.GET;

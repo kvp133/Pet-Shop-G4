@@ -1,6 +1,5 @@
 package com.example.petshopapplication;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
@@ -11,9 +10,6 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.petshopapplication.Adapter.CategoryAdapter;
-import com.example.petshopapplication.Adapter.FeedBackAdapter;
-import com.example.petshopapplication.Adapter.ProductAdapter;
 import com.example.petshopapplication.databinding.ActivityHomeBinding;
 import com.example.petshopapplication.model.Category;
 import com.example.petshopapplication.model.FeedBack;
@@ -63,28 +59,28 @@ public class HomeActivity extends AppCompatActivity {
         binding.btnHomeSearch.setOnClickListener(v -> {
             String searchText = binding.tvSearch.getText().toString().trim();
             if(!searchText.isEmpty()) {
-                Intent intent = new Intent(HomeActivity.this, ListProductActivity.class);
-                intent.putExtra("searchText", searchText);
-                intent.putExtra("isSearch", true);
-                startActivity(intent);
+//                Intent intent = new Intent(HomeActivity.this, ListProductActivity.class);
+//                intent.putExtra("searchText", searchText);
+//                intent.putExtra("isSearch", true);
+//                startActivity(intent);
             }
         });
 
-        binding.btnHomeCart.setOnClickListener(v -> {
-            Intent intent = new Intent(this, CartActivity.class);
-            startActivity(intent);
-        });
-
-        binding.btnHomeLogout.setOnClickListener(v -> {
-            firebaseAuth.signOut();
-            Intent intent = new Intent(this, LoginActivity.class);
-            startActivity(intent);
-        });
-
-        binding.tvViewListProduct.setOnClickListener(v -> {
-            Intent intent = new Intent(HomeActivity.this, ListProductActivity.class);
-            startActivity(intent);
-        });
+//        binding.btnHomeCart.setOnClickListener(v -> {
+//            Intent intent = new Intent(this, CartActivity.class);
+//            startActivity(intent);
+//        });
+//
+//        binding.btnHomeLogout.setOnClickListener(v -> {
+//            firebaseAuth.signOut();
+//            Intent intent = new Intent(this, LoginActivity.class);
+//            startActivity(intent);
+//        });
+//
+//        binding.tvViewListProduct.setOnClickListener(v -> {
+//            Intent intent = new Intent(HomeActivity.this, ListProductActivity.class);
+//            startActivity(intent);
+//        });
     }
 
     private void initNewProduct(List<Category> categoryItems){
@@ -105,7 +101,7 @@ public class HomeActivity extends AppCompatActivity {
                             productItems.add(product);
                         }
                     }
-                    productAdapter = new ProductAdapter(productItems, categoryItems);
+                   // productAdapter = new ProductAdapter(productItems, categoryItems);
                     binding.rcvNewProduct.setLayoutManager(new LinearLayoutManager(HomeActivity.this, LinearLayoutManager.HORIZONTAL, false));
                     binding.rcvNewProduct.setAdapter(productAdapter);
                     binding.prgHomeNewProduct.setVisibility(View.INVISIBLE);
@@ -165,14 +161,14 @@ public class HomeActivity extends AppCompatActivity {
                             userItems.add(user);
                         }
                         if(userItems.size() > 0) {
-                            feedbackAdapter = new FeedBackAdapter(feedbackItems, userItems);
+                            //feedbackAdapter = new FeedBackAdapter(feedbackItems, userItems);
                             binding.rcvFeedback.setLayoutManager(new LinearLayoutManager(HomeActivity.this, RecyclerView.VERTICAL, true));
                             binding.rcvFeedback.setAdapter(feedbackAdapter);
 
                             binding.btnHomeUserPanel.setOnClickListener(v -> {
-                                Intent intent = new Intent(HomeActivity.this, UserPanel.class);
-                                intent.putExtra("userId", userItems.get(0).getId());
-                                startActivity(intent);
+//                                Intent intent = new Intent(HomeActivity.this, UserPanel.class);
+//                                intent.putExtra("userId", userItems.get(0).getId());
+//                                startActivity(intent);
                             });
                         }
                         binding.prgFeedback.setVisibility(View.GONE);
@@ -205,7 +201,7 @@ public class HomeActivity extends AppCompatActivity {
                     }
 
                     if(categoryItems.size() > 1) {
-                        categoryAdapter = new CategoryAdapter(categoryItems);
+                        //categoryAdapter = new CategoryAdapter(categoryItems);
                         binding.rcvHomeCategory.setLayoutManager(new GridLayoutManager(HomeActivity.this, 3));
                         binding.rcvHomeCategory.setAdapter(categoryAdapter);
                     }
