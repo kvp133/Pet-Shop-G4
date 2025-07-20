@@ -141,13 +141,13 @@ public class LoginActivity extends AppCompatActivity {
                         startActivity(intent);
                     } else if(user.getRoleId() == ROLE_INVENTORY) {
                         //User is authenticated, go to home activity
-                        Intent intent = new Intent(LoginActivity.this, ListOrderManageActivity.class);
-                        startActivity(intent);
+                        //Intent intent = new Intent(LoginActivity.this, ListOrderManageActivity.class);
+                        //startActivity(intent);
                     }
                     else if(user.getRoleId() == ROLE_MARKETING) {
                         //User is authenticated, go to home activity
-                        Intent intent = new Intent(LoginActivity.this, ViewAdminDashBoardActivity.class);
-                        startActivity(intent);
+                        //Intent intent = new Intent(LoginActivity.this, ViewAdminDashBoardActivity.class);
+                        //startActivity(intent);
                     }
                 }
             }
